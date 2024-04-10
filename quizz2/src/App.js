@@ -105,6 +105,7 @@ const Quiz = () => {
           <div>
             <span className="active-question-no">{addLeadingZero(activeQuestion + 1)}</span>
             <span className="total-question">/{addLeadingZero(questions[activeTheme].length)}</span>
+            <h2>{theme}</h2>
           </div>
           <img align="center" alt={image2} src={image2} width="800px"/>
           <h2>{question}</h2>
@@ -118,6 +119,8 @@ const Quiz = () => {
               </li>
             ))}
           </ul>
+          <h2>Explication: </h2>
+          <h3>{explication}</h3>
           <div className="flex-right">
             <button onClick={onClickShowResult} disabled={selectedAnswerIndex === null}>
               Show Results
